@@ -1,0 +1,33 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
+
+class test {
+
+	@Test
+	public void assignHandTestRock() {
+		
+		Play play = Mockito.spy(new Play());
+		String handTest = play.assignHand(0);
+		Mockito.verify(play).assignHand(0);
+	}
+	
+	@Test
+	public void assignHandTestPaper() {
+		
+		Play play = Mockito.spy(new Play());
+		String handTest = play.assignHand(1);
+		Mockito.verify(play).assignHand(1);
+	}
+	
+	@Test
+	public void assignHandTestScissors() {
+		
+		Play play = Mockito.spy(new Play());
+		String handTest = play.assignHand(2);
+		Mockito.verify(play).assignHand(2);
+	}
+
+}
